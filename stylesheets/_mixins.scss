@@ -1,0 +1,27 @@
+
+// fonts
+
+@mixin adelle($font-size, $font-weight, $font-color: $text, $line-height: normal) {
+	font-family: 'adelle', serif;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $font-color;
+	line-height: $line-height;
+}
+@mixin proxiNova($font-size, $font-weight, $font-color: $text, $line-height: normal) {
+	font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $font-color;
+	line-height: $line-height;
+}
+
+// layout
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

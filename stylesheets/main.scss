@@ -1,0 +1,329 @@
+
+@import 'base';
+@import 'font-awesome/scss/font-awesome';
+
+//this is the default number of columns
+/* $total-columns  : 10;
+
+//width of each column
+$column-width   : 4em;
+
+//space between columns
+$gutter-width   : 2em;
+
+//space on the right and left of the grid
+$grid-padding   : $gutter-width;
+
+//alternative layout breakpoints
+$tablet: 8;
+$computer: 55em 12;
+$wide: 66em 12;
+
+$container-style: magic; */
+
+/*------------------------------------*\
+    HTML5 BOILERPLATE
+\*------------------------------------*/
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+// A better looking default horizontal rule
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0 0 35px;
+  padding: 0;
+}
+
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+img {
+  vertical-align: middle;
+}
+
+// Remove defauly fieldset styles
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+//Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+// Chrome Frame
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*------------------------------------*\
+    SUSY GRID
+\*------------------------------------*/
+
+/* .container {
+  @include container; 
+  @include clearfix;
+  @include susy-grid-background;
+}
+
+.col-left {
+  @include at-breakpoint($computer) {
+    @include span-columns(3);
+  }
+}
+
+.col-right {
+  @include at-breakpoint($computer) {
+    @include span-columns(7 omega);
+  } 
+} */
+
+/*------------------------------------*\
+    ELEMENTAL STYLES
+\*------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #252525;
+  @include proxiNova(16px, 400, #252525);
+}
+
+header {
+  padding: 5%;
+  overflow: hidden;
+}
+
+main {
+  padding: 5%;
+  background: #fff;
+}
+
+h1 {
+  margin: 45px 0;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 15px 0 30px;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: underline;
+  color: $teal;
+  @include transition;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*------------------------------------*\
+    HEADER STYLES
+\*------------------------------------*/
+
+.logo-wrap {
+  margin-top: 0;
+  width: 48%;
+  //margin-right: 2%;
+  //float: left;
+}
+
+.logo {
+  width: 75px;
+}
+
+.dash-mark {
+  display: block;
+  width: 30px;
+  border-top: 3px solid #fff;
+}
+
+.tagline-wrap {
+  margin-bottom: 45px;
+  clear: left;
+}
+
+.tagline {
+  color: #fff;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  @include adelle(14px, 700);
+  li {
+    //margin-bottom: 20px;
+    padding: 10px 0;
+    &:first-child {
+      //padding-left: 0;
+    }
+    &:last-child {
+      //padding-right: 0;
+    }
+    //float: left;
+    /* &:nth-child(odd) {
+      width: 48%;
+      margin-right: 2%;
+    }
+    &:nth-child(even) {
+      width: 48%;
+      margin-left: 2%;
+    } */
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+/*------------------------------------*\
+    CONTENT
+\*------------------------------------*/
+
+.assets-list {
+  margin-bottom: 30px;
+  list-style: none;
+  li {
+    line-height: 160%;
+  }
+}
+
+.download {
+  display: block;
+  margin-bottom: 30px;
+}
+ 
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+
+footer {
+  padding: 5%;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+
+// Desktop
+@media(min-width: $tablet) {
+  .contact-list {
+    li {
+      /* &:nth-child(odd) {
+        width: 23.5%;
+      }
+      &:nth-child(even) {
+        width: 23.5%;
+        margin-left: 0;
+      }
+      width: 23.5%;
+      margin-right: 2%;
+      &:last-child {
+        margin-right: 0;
+      } */
+    }
+  }
+}
+
+// Desktop
+@media(min-width: $desktop) {
+  h1 {
+    margin: 114px 0 45px;
+  }
+  .logo-wrap {
+    margin-top: 0;
+  }
+  header {
+    padding: 45px 0;
+  }
+  main {
+    padding: 45px;
+  }
+  .col-left {
+    width: 30%;
+    padding-right: 40px;
+    hr {
+      clear: right;
+      width: 65%;
+      float: right;
+    }
+  }
+  .col-right {
+    width: 70%;
+  }
+  .col-left, .col-right {
+    float: left;
+  }
+  .contact-list, .tagline-wrap, .logo-wrap {
+    width: 65%;
+    float: right;
+  }
+  .contact-list, .tagline-wrap {
+    clear: right;
+  }
+  .contact-list {
+    display: block;
+    li {
+      //float: none;
+      /* &:nth-child(odd), &:nth-child(even) {
+        width: 100%;
+        margin: 0;
+      } */
+    }
+  }
+  .tagline-wrap {
+    margin-bottom: 45px;
+  }
+}
